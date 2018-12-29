@@ -1,18 +1,17 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import './App.css'
+import BarChart from './BarChart'
+import WorldMap from './WorldMap'
 
-class App extends Component {
+export default class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1>ABUSADORA</h1>
-        </header>
+      <div className='App'>
+        <div className='d-flex justify-content-around my-3'>
+          <BarChart data={[1, 10, 1, 3]} size={[300, 300]} />
+          <WorldMap/>
+        </div>
       </div>
-    );
+    )
   }
 }
-
-export default App;
